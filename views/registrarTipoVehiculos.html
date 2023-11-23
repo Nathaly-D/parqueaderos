@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<h2>Formulario de Registro <br>tipo de vehiculos</h2>
+
+<form action="../controllers/insertarTipoVehiculos.php" method="POST">
+    <label for="vehiculoTvehiculoT">Tipo de Vehiculo:</label>
+    <input type="text" id="vehiculoT" name="vehiculoT" required><br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+<button id="iniciopag" onclick="window.location.href='../index.html'">Inicio</button>
+
+</body>
+</html>
