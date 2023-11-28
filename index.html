@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid" id="logo">
+          <a class="navbar-brand" href="#">
+            <img src="./assets/dist/_f1f61e25-032e-4d2d-8b05-1c50aefa8069.jfif" alt="Logo" width="80" height="80" >
+          </a>
+        </div>
+      </nav>
+
     <style>
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 50px;
-            background-color: #9EB8D9;
+            margin: 1%;
+            background-color: #253648;
+            justify-content: flex-end;
         }
 
         button {
@@ -25,6 +36,8 @@
         h2{
             font-size: 25px;
             padding: 20px;
+            color: white;
+            justify-content: flex-end;
         }
     </style>
 </head>
@@ -48,5 +61,7 @@
 <button onclick="window.location.href='./views/registrarParqueos.php'">Guardar Parqueos</button>
 <button onclick="window.location.href='./views/mostrarParqueos.php'">Mostrar Parqueos</button>
 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -8,5 +8,3 @@ $cliente -> guardar();
 header("Location: ../views/mostrarClientes.php");
 exit(); // Asegura que el script se detenga después de la redirección
 ?>
-
-
