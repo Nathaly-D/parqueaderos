@@ -88,15 +88,18 @@ class Parqueadero{
             $conexion = null;
         }
     }
-
-    public static function mostrar(){
+    
+    
+    public static function mostrar() {
         $conexion = new Conexion();
-        $consulta = $conexion -> prepare('SELECT id, nombre_parqueadero, ubicacion_parqueadero, cupos_parqueadero, horario_parqueadero, id_administrador FROM ' . self::TABLA . ' ORDER BY id');
-        $consulta -> execute();
-        $registros = $consulta -> fetchAll();
-
+        $consulta = $conexion->prepare('SELECT p.nombre_parqueadero, p.ubicacion_parqueadero, p.cupos_parqueadero, p.horario_parqueadero, a.nombre AS nombre_administrador
+                                            FROM parqueaderos p
+                                            INNER JOIN administradores a ON p.id_administrador = a.id');
+        $consulta->execute();
+        $registros = $consulta->fetchAll();
+    
         return $registros;
- 
-    }
+        }
+    
 
 }

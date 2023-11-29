@@ -92,21 +92,26 @@ class Reserva{
             
             $this->id = $conexion->lastInsertId();
         } catch (PDOException $e) {
-            // Manejar la excepción (por ejemplo, imprimir el mensaje de error)
             echo "Error: " . $e->getMessage();
         } finally {
             $conexion = null;
         }
     }
 
-    public static function mostrar(){
+
+
+    public static function mostrar() {
         $conexion = new Conexion();
-        $consulta = $conexion -> prepare('SELECT id, fecha, hora, entrada, salida, id_vehiculo, id_parqueadero FROM ' . self::TABLA . ' ORDER BY id');
-        $consulta -> execute();
-        $registros = $consulta -> fetchAll();
+        $consulta = $conexion->prepare('SELECT r.fecha, r.hora, r.entrada, r.salida, v.placa AS placa_vehiculo, p.nombre_parqueadero 
+                                        FROM reservas r 
+                                        INNER JOIN vehiculos v ON r.id_vehiculo = v.id
+                                        INNER JOIN parqueaderos p ON r.id_parqueadero = p.id');
+        $consulta->execute();
+        $registros = $consulta->fetchAll();
 
         return $registros;
- 
     }
+
+
 
 }

@@ -30,7 +30,7 @@ $parqueadero = Parqueadero::mostrar();
             <td> <?php echo $item['ubicacion_parqueadero']; ?></td>
             <td> <?php echo $item['cupos_parqueadero']; ?></td>
             <td> <?php echo $item['horario_parqueadero']; ?></td>
-            <td> <?php echo $item['id_administrador']; ?></td>
+            <td> <?php echo $item['nombre_administrador']; ?></td>
         </tr>
         <?php endforeach;
         ?>

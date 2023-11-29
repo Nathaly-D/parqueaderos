@@ -30,8 +30,8 @@ $reserva = Reserva::mostrar();
             <td> <?php echo $item['hora']; ?></td>
             <td> <?php echo $item['entrada']; ?></td>
             <td> <?php echo $item['salida']; ?></td>
-            <td> <?php echo $item['id_vehiculo']; ?></td>
-            <td> <?php echo $item['id_parqueadero']; ?></td>
+            <td> <?php echo $item['placa_vehiculo']; ?></td>
+            <td> <?php echo $item['nombre_parqueadero']; ?></td>
         </tr>
         <?php endforeach;
         ?>
